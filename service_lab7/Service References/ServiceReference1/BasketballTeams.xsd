@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/BasketballTeams.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/BasketballTeams.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/BasketballTeams.xsd" id="BasketballTeams" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" name="BasketballTeams">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Player">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" type="xs:int" />
+              <xs:element minOccurs="0" name="Name" type="xs:string" />
+              <xs:element minOccurs="0" name="Surname" type="xs:string" />
+              <xs:element minOccurs="0" name="Age" type="xs:int" />
+              <xs:element minOccurs="0" name="NumberOfTeam" type="xs:int" />
+              <xs:element name="IdTeam" type="xs:int" />
+              <xs:element name="IdManager" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Manager">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="Id" type="xs:int" />
+              <xs:element minOccurs="0" name="Name" type="xs:string" />
+              <xs:element minOccurs="0" name="Surname" type="xs:string" />
+              <xs:element minOccurs="0" name="TelNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="Email" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Coach">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" type="xs:int" />
+              <xs:element minOccurs="0" name="Name" type="xs:string" />
+              <xs:element minOccurs="0" name="Surname" type="xs:string" />
+              <xs:element minOccurs="0" name="NumberOfChampions" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Team">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Id" type="xs:int" />
+              <xs:element minOccurs="0" name="Name" type="xs:string" />
+              <xs:element minOccurs="0" name="YearFoundation" type="xs:int" />
+              <xs:element minOccurs="0" name="City" type="xs:string" />
+              <xs:element minOccurs="0" name="NumberOfChampions" type="xs:int" />
+              <xs:element name="IdCoach" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="PlayerKey">
+      <xs:selector xpath=".//mstns:Player" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="ManagerKey">
+      <xs:selector xpath=".//mstns:Manager" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="CoachKey">
+      <xs:selector xpath=".//mstns:Coach" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Team" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:keyref msdata:ConstraintOnly="true" name="FK_Coach_Team" refer="mstns:CoachKey">
+      <xs:selector xpath=".//mstns:Team" />
+      <xs:field xpath="mstns:IdCoach" />
+    </xs:keyref>
+    <xs:keyref msdata:ConstraintOnly="true" name="FK_Team_Player" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:Player" />
+      <xs:field xpath="mstns:IdTeam" />
+    </xs:keyref>
+    <xs:keyref msdata:ConstraintOnly="true" name="FK_Manager_Player" refer="mstns:ManagerKey">
+      <xs:selector xpath=".//mstns:Player" />
+      <xs:field xpath="mstns:IdManager" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

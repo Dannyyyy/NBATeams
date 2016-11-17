@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://somecompany/someservice" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://somecompany/someservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://somecompany/someservice">
+      <s:import namespace="http://tempuri.org/BasketballTeams.xsd" />
+      <s:import schemaLocation="http://localhost:36292/BLogic.asmx?schema=BasketballTeams" namespace="http://tempuri.org/BasketballTeams.xsd" />
+      <s:element name="readCoachs">
+        <s:complexType />
+      </s:element>
+      <s:element name="readCoachsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="readCoachsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/BasketballTeams.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateCoach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="datasetBasketballTeams">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/BasketballTeams.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateCoachResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="readTeams">
+        <s:complexType />
+      </s:element>
+      <s:element name="readTeamsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="readTeamsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/BasketballTeams.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateTeam">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="datasetBasketballTeams">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/BasketballTeams.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateTeamResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="readPlayers">
+        <s:complexType />
+      </s:element>
+      <s:element name="readPlayersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="readPlayersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/BasketballTeams.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePlayer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="datasetBasketballTeams">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/BasketballTeams.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePlayerResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="readManagers">
+        <s:complexType />
+      </s:element>
+      <s:element name="readManagersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="readManagersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/BasketballTeams.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateManager">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="datasetBasketballTeams">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/BasketballTeams.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateManagerResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="readCoachsSoapIn">
+    <wsdl:part name="parameters" element="tns:readCoachs" />
+  </wsdl:message>
+  <wsdl:message name="readCoachsSoapOut">
+    <wsdl:part name="parameters" element="tns:readCoachsResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateCoachSoapIn">
+    <wsdl:part name="parameters" element="tns:updateCoach" />
+  </wsdl:message>
+  <wsdl:message name="updateCoachSoapOut">
+    <wsdl:part name="parameters" element="tns:updateCoachResponse" />
+  </wsdl:message>
+  <wsdl:message name="readTeamsSoapIn">
+    <wsdl:part name="parameters" element="tns:readTeams" />
+  </wsdl:message>
+  <wsdl:message name="readTeamsSoapOut">
+    <wsdl:part name="parameters" element="tns:readTeamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateTeamSoapIn">
+    <wsdl:part name="parameters" element="tns:updateTeam" />
+  </wsdl:message>
+  <wsdl:message name="updateTeamSoapOut">
+    <wsdl:part name="parameters" element="tns:updateTeamResponse" />
+  </wsdl:message>
+  <wsdl:message name="readPlayersSoapIn">
+    <wsdl:part name="parameters" element="tns:readPlayers" />
+  </wsdl:message>
+  <wsdl:message name="readPlayersSoapOut">
+    <wsdl:part name="parameters" element="tns:readPlayersResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePlayerSoapIn">
+    <wsdl:part name="parameters" element="tns:updatePlayer" />
+  </wsdl:message>
+  <wsdl:message name="updatePlayerSoapOut">
+    <wsdl:part name="parameters" element="tns:updatePlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="readManagersSoapIn">
+    <wsdl:part name="parameters" element="tns:readManagers" />
+  </wsdl:message>
+  <wsdl:message name="readManagersSoapOut">
+    <wsdl:part name="parameters" element="tns:readManagersResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateManagerSoapIn">
+    <wsdl:part name="parameters" element="tns:updateManager" />
+  </wsdl:message>
+  <wsdl:message name="updateManagerSoapOut">
+    <wsdl:part name="parameters" element="tns:updateManagerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BLogicSoap">
+    <wsdl:operation name="readCoachs">
+      <wsdl:input message="tns:readCoachsSoapIn" />
+      <wsdl:output message="tns:readCoachsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCoach">
+      <wsdl:input message="tns:updateCoachSoapIn" />
+      <wsdl:output message="tns:updateCoachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="readTeams">
+      <wsdl:input message="tns:readTeamsSoapIn" />
+      <wsdl:output message="tns:readTeamsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateTeam">
+      <wsdl:input message="tns:updateTeamSoapIn" />
+      <wsdl:output message="tns:updateTeamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="readPlayers">
+      <wsdl:input message="tns:readPlayersSoapIn" />
+      <wsdl:output message="tns:readPlayersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePlayer">
+      <wsdl:input message="tns:updatePlayerSoapIn" />
+      <wsdl:output message="tns:updatePlayerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="readManagers">
+      <wsdl:input message="tns:readManagersSoapIn" />
+      <wsdl:output message="tns:readManagersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateManager">
+      <wsdl:input message="tns:updateManagerSoapIn" />
+      <wsdl:output message="tns:updateManagerSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BLogicSoap" type="tns:BLogicSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="readCoachs">
+      <soap:operation soapAction="http://somecompany/someservice/readCoachs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCoach">
+      <soap:operation soapAction="http://somecompany/someservice/updateCoach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readTeams">
+      <soap:operation soapAction="http://somecompany/someservice/readTeams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTeam">
+      <soap:operation soapAction="http://somecompany/someservice/updateTeam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readPlayers">
+      <soap:operation soapAction="http://somecompany/someservice/readPlayers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePlayer">
+      <soap:operation soapAction="http://somecompany/someservice/updatePlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readManagers">
+      <soap:operation soapAction="http://somecompany/someservice/readManagers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateManager">
+      <soap:operation soapAction="http://somecompany/someservice/updateManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BLogicSoap12" type="tns:BLogicSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="readCoachs">
+      <soap12:operation soapAction="http://somecompany/someservice/readCoachs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCoach">
+      <soap12:operation soapAction="http://somecompany/someservice/updateCoach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readTeams">
+      <soap12:operation soapAction="http://somecompany/someservice/readTeams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTeam">
+      <soap12:operation soapAction="http://somecompany/someservice/updateTeam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readPlayers">
+      <soap12:operation soapAction="http://somecompany/someservice/readPlayers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePlayer">
+      <soap12:operation soapAction="http://somecompany/someservice/updatePlayer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readManagers">
+      <soap12:operation soapAction="http://somecompany/someservice/readManagers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateManager">
+      <soap12:operation soapAction="http://somecompany/someservice/updateManager" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BLogic">
+    <wsdl:port name="BLogicSoap" binding="tns:BLogicSoap">
+      <soap:address location="http://localhost:36292/BLogic.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BLogicSoap12" binding="tns:BLogicSoap12">
+      <soap12:address location="http://localhost:36292/BLogic.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
