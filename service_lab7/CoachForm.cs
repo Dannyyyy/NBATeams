@@ -49,28 +49,35 @@ namespace service_lab7
         // Добавление
         private void button1_Click(object sender, EventArgs e)
         {
-            Random rand = new Random();
-            switch (rand.Next(0, 5))
+            try
             {
-                case 0: ds.Coach.AddCoachRow(1, "Kareem", "Abdul-Jabbar", rand.Next(5, 15));
+                Random rand = new Random();
+                switch (rand.Next(0, 5))
+                {
+                    case 0:
+                        ds.Coach.AddCoachRow(1, "Kareem", "Abdul-Jabbar", rand.Next(5, 15));
                         break;
-                case 1:
-                    ds.Coach.AddCoachRow(1, "Dave", "Bing", rand.Next(5, 15));
-                    break;
-                case 2:
-                    ds.Coach.AddCoachRow(1, "Bill", "Bradley", rand.Next(5, 15));
-                    break;
-                case 3:
-                    ds.Coach.AddCoachRow(1, "Wilt", "Chambelmaeit", rand.Next(5, 15));
-                    break;
-                case 4:
-                    ds.Coach.AddCoachRow(1, "Kobe", "Bryan", rand.Next(0, 15));
-                    break;
-                default:
-                    ds.Coach.AddCoachRow(1, "Lil", "Wayne", rand.Next(0, 15));
-                    break;
+                    case 1:
+                        ds.Coach.AddCoachRow(1, "Dave", "Bing", rand.Next(5, 15));
+                        break;
+                    case 2:
+                        ds.Coach.AddCoachRow(1, "Bill", "Bradley", rand.Next(5, 15));
+                        break;
+                    case 3:
+                        ds.Coach.AddCoachRow(1, "Wilt", "Chambelmaeit", rand.Next(5, 15));
+                        break;
+                    case 4:
+                        ds.Coach.AddCoachRow(1, "Kobe", "Bryan", rand.Next(0, 15));
+                        break;
+                    default:
+                        ds.Coach.AddCoachRow(1, "Lil", "Wayne", rand.Next(0, 15));
+                        break;
+                }
             }
-            
+            catch (Exception)
+            {
+                MessageBox.Show("Произошла ошибка.");
+            }
         }
 
         // Удаление
@@ -83,8 +90,15 @@ namespace service_lab7
         private void button3_Click(object sender, EventArgs e)
         {
             bindingSource.EndEdit();
-            callWebService.updateCoach(ds);
-            ds.AcceptChanges();
+            try
+            {
+                callWebService.updateCoach(ds);
+                ds.AcceptChanges();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Произошла ошибка.");
+            }
         }
 
         // Отмена

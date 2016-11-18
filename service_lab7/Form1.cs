@@ -31,5 +31,10 @@ namespace service_lab7
         {
             new TeamForm().ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new PlayerForm().ShowDialog();
+        }
     }
 }

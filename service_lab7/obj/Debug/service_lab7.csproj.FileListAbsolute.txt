@@ -21,3 +21,4 @@ C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.
 C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.Properties.Resources.resources
 C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.TeamForm.resources
 C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.csproj.GenerateResource.Cache
+C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.PlayerForm.resources

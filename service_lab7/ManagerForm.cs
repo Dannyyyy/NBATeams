@@ -49,27 +49,34 @@ namespace service_lab7
         // Добавление
         private void button1_Click(object sender, EventArgs e)
         {
-            Random rand = new Random();
-            switch (rand.Next(0, 5))
+            try
             {
-                case 0:
-                    ds.Manager.AddManagerRow(1, "Roy", "Pitterson", "+" + rand.Next(10000, 99999).ToString(), "r.petterson@mail.ru");
-                    break;
-                case 1:
-                    ds.Manager.AddManagerRow(1, "Mitch", "McMac", "+" + rand.Next(10000, 99999).ToString(), "m.mcm@gmail.com");
-                    break;
-                case 2:
-                    ds.Manager.AddManagerRow(1, "Joe", "Gilmary", "+" + rand.Next(10000, 99999).ToString(), "j.gilmary@ya.ru");
-                    break;
-                case 3:
-                    ds.Manager.AddManagerRow(1, "Sam", "Golder", "+" + rand.Next(10000, 99999).ToString(), "s.gold@list.com");
-                    break;
-                case 4:
-                    ds.Manager.AddManagerRow(1, "Chick", "Chan", "+" + rand.Next(10000, 99999).ToString(), "c.chan@box.com");
-                    break;
-                default:
-                    ds.Manager.AddManagerRow(1, "Phil", "Jasser", "+" + rand.Next(10000, 99999).ToString(), "p.jas@gmail.com");
-                    break;
+                Random rand = new Random();
+                switch (rand.Next(0, 5))
+                {
+                    case 0:
+                        ds.Manager.AddManagerRow(1, "Roy", "Pitterson", "+" + rand.Next(10000, 99999).ToString(), "r.petterson@mail.ru");
+                        break;
+                    case 1:
+                        ds.Manager.AddManagerRow(1, "Mitch", "McMac", "+" + rand.Next(10000, 99999).ToString(), "m.mcm@gmail.com");
+                        break;
+                    case 2:
+                        ds.Manager.AddManagerRow(1, "Joe", "Gilmary", "+" + rand.Next(10000, 99999).ToString(), "j.gilmary@ya.ru");
+                        break;
+                    case 3:
+                        ds.Manager.AddManagerRow(1, "Sam", "Golder", "+" + rand.Next(10000, 99999).ToString(), "s.gold@list.com");
+                        break;
+                    case 4:
+                        ds.Manager.AddManagerRow(1, "Chick", "Chan", "+" + rand.Next(10000, 99999).ToString(), "c.chan@box.com");
+                        break;
+                    default:
+                        ds.Manager.AddManagerRow(1, "Phil", "Jasser", "+" + rand.Next(10000, 99999).ToString(), "p.jas@gmail.com");
+                        break;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Произошла ошибка.");
             }
         }
 
@@ -83,8 +90,15 @@ namespace service_lab7
         private void button3_Click(object sender, EventArgs e)
         {
             bindingSource.EndEdit();
-            callWebService.updateManager(ds);
-            ds.AcceptChanges();
+            try
+            {
+                callWebService.updateManager(ds);
+                ds.AcceptChanges();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Произошла ошибка.");
+            }
         }
 
         // Отмена
