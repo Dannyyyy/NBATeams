@@ -26,5 +26,10 @@ namespace service_lab7
         {
             new ManagerForm().ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new TeamForm().ShowDialog();
+        }
     }
 }

@@ -72,6 +72,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="TeamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamForm.Designer.cs">
+      <DependentUpon>TeamForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CoachForm.resx">
       <DependentUpon>CoachForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +96,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TeamForm.resx">
+      <DependentUpon>TeamForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

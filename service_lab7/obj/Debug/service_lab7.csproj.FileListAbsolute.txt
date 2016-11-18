@@ -12,3 +12,12 @@ c:\users\danil\documents\visual studio 2015\Projects\service_lab7\service_lab7\o
 C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\bin\Debug\service_lab7.exe.config
 C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.exe
 C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.pdb
+C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\bin\Debug\service_lab7.exe
+C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\bin\Debug\service_lab7.pdb
+C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.csprojResolveAssemblyReference.cache
+C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.CoachForm.resources
+C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.Form1.resources
+C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.ManagerForm.resources
+C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.Properties.Resources.resources
+C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.TeamForm.resources
+C:\Users\Danil\Source\Repos\BasketballWorld\service_lab7\obj\Debug\service_lab7.csproj.GenerateResource.Cache
